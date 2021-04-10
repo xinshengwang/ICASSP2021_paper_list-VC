@@ -1,3 +1,14 @@
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
 # ICASSP2021_paper_list-VC
 Papers accepted to ICASSP 2021 in term of voice conversion (VC)
 
@@ -89,6 +100,8 @@ Papers accepted to ICASSP 2021 in term of voice conversion (VC)
     $\operatorname{IN}(Z)=\frac{Z-\mu(Z)}{\sigma(Z)}$，其中平均值$\mu$和方差$\sigma$是基于channel wise的。在AdaIN-VC中，作者认为这种时间不变性的参数$\mu$和$\sigma$是可以代表speaker信息的。
 
 * Adaptive instance nomalization (AdapIN) 可以看作是IN的逆操作，不过这里采用的$\mu$和$\sigma$是目标说话的参数。比如，如果我们希望保留$H$的内容，但将风格迁移到$Z$的风格上，AdapIN的操作可表示为：$\operatorname{AdaIN}(\boldsymbol{H}, \mu(\boldsymbol{Z}), \sigma(\boldsymbol{Z}))=\sigma(\boldsymbol{Z}) \operatorname{IN}(\boldsymbol{H})+\mu(\boldsymbol{Z})$
+
+
 
 * 文中有意思的一点是关于激活函数的选择。作者认为，通过在encoder的输出层添加激活函数（如图中左下角的Activations）可以更好的去除content embedding中的源说话人信息。文中对比了几种不同的激活函数，发现sigmoid的效果最好。如下表所示，分别利用content embedding （$C$）和由$\mu$及$\sigma$组成的speaker info $S$训练一个speaker的分类器，理想状态下基于$C$的精度越低越好，而基于$S$的精度应该越高越好：
 
