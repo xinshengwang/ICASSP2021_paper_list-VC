@@ -1,14 +1,3 @@
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
-    }
-  });
-</script>
-
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
 # ICASSP2021_paper_list-VC
 Papers accepted to ICASSP 2021 in term of voice conversion (VC)
 
@@ -17,12 +6,15 @@ Papers accepted to ICASSP 2021 in term of voice conversion (VC)
   - [Zero-shot and low-resource VC](#zero-shot-and-low-resource-vc)
   - [cross-lingual VC](#cross-lingual-vc)
   - [Toolkit](#toolkit)
+  - [Dataset](#dataset)
   - [Reading Note](#reading-note)
     - [1. Fragmentvc: any-to-any voice conversion by end-to-end extracting and fusing fine-grained voice fragments with attention.](#1-fragmentvc-any-to-any-voice-conversion-by-end-to-end-extracting-and-fusing-fine-grained-voice-fragments-with-attention)
     - [2. Maskcyclegan-vc: learning non-parallel voice conversion with filling in frames.](#2-maskcyclegan-vc-learning-non-parallel-voice-conversion-with-filling-in-frames)
     - [3. PPG-based singing voice conversion with adversarial representation learning.](#3-ppg-based-singing-voice-conversion-with-adversarial-representation-learning)
     - [4. Again-vc: a one-shot voice conversion using activation guidance and adaptive instance normalization.](#4-again-vc-a-one-shot-voice-conversion-using-activation-guidance-and-adaptive-instance-normalization)
-    - [5. Any-to-One Sequence-to-Sequence Voice Conversion using Self-Supervised Discrete Speech Representations.](#5-any-to-one-sequence-to-sequence-voice-conversion-using-self-supervised-discrete-speech-representations)
+    - [5.  Seen and unseen emotional style transfer for voice conversion with a new emotional speech dataset.](#5--seen-and-unseen-emotional-style-transfer-for-voice-conversion-with-a-new-emotional-speech-dataset)
+    - [6. Towards natural and controllable cross-lingual voice conversion based on neural tts model and phonetic posteriorgram](#6-towards-natural-and-controllable-cross-lingual-voice-conversion-based-on-neural-tts-model-and-phonetic-posteriorgram)
+    - [7. End-to-end lyrics recognition with voice to singing style transfer.](#7-end-to-end-lyrics-recognition-with-voice-to-singing-style-transfer)
 
 ## VC
 
@@ -35,12 +27,12 @@ Papers accepted to ICASSP 2021 in term of voice conversion (VC)
 ## Zero-shot and low-resource VC
 
 1. [Again-vc: a one-shot voice conversion using activation guidance and adaptive instance normalization.](#4-again-vc-a-one-shot-voice-conversion-using-activation-guidance-and-adaptive-instance-normalization) ([paper](https://arxiv.org/pdf/2011.00316.pdf),[code](https://github.com/KimythAnly/AGAIN-VC))
-2. Any-to-One Sequence-to-Sequence Voice Conversion using Self-Supervised Discrete Speech Representations. ([paper](https://arxiv.org/pdf/2010.12231.pdf),[Espnet parameter](https://gist.github.com/unilight/a48f99cf6a47c0b4e5b96fe1d6e59397))
+2. [Any-to-One Sequence-to-Sequence Voice Conversion using Self-Supervised Discrete Speech Representations.](#5-any-to-one-sequence-to-sequence-voice-conversion-using-self-supervised-discrete-speech-representations) ([paper](https://arxiv.org/pdf/2010.12231.pdf),[Espnet parameter](https://gist.github.com/unilight/a48f99cf6a47c0b4e5b96fe1d6e59397))
 3. [Fragmentvc: any-to-any voice conversion by end-to-end extracting and fusing fine-grained voice fragments with attention.](#1-fragmentvc-any-to-any-voice-conversion-by-end-to-end-extracting-and-fusing-fine-grained-voice-fragments-with-attention-non-parallel-vc) *National Taiwan University* ([paper](https://arxiv.org/pdf/2010.14150.pdf),[code](https://github.com/yistLin/FragmentVC))
-4. End-to-end lyrics recognition with voice to singing style transfer. ([paper](https://arxiv.org/pdf/2102.08575.pdf),[demo](https://github.com/iiscleap/V2S_Samples))
+4. [End-to-end lyrics recognition with voice to singing style transfer.](#7-end-to-end-lyrics-recognition-with-voice-to-singing-style-transfer) ([paper](https://arxiv.org/pdf/2102.08575.pdf),[demo](https://github.com/iiscleap/V2S_Samples))
 5. One-shot voice conversion based on speaker aware module
-6. Seen and unseen emotional style transfer for voice conversion with a new emotional speech dataset. ([paper](https://arxiv.org/pdf/2010.14794.pdf),[code](https://kunzhou9646.github.io/controllable-evc/))
-7. Towards low-resource stargan voice conversion using weight adaptive instance normalization. ([paper](https://arxiv.org/pdf/2010.11646.pdf),[code](https://github.com/MingjieChen/LowResourceVC))
+6. [Seen and unseen emotional style transfer for voice conversion with a new emotional speech dataset.](#5--seen-and-unseen-emotional-style-transfer-for-voice-conversion-with-a-new-emotional-speech-dataset) ([paper](https://arxiv.org/pdf/2010.14794.pdf),[code](https://kunzhou9646.github.io/controllable-evc/))
+7. [Towards low-resource stargan voice conversion using weight adaptive instance normalization.](#6-towards-natural-and-controllable-cross-lingual-voice-conversion-based-on-neural-tts-model-and-phonetic-posteriorgram) ([paper](https://arxiv.org/pdf/2010.11646.pdf),[code](https://github.com/MingjieChen/LowResourceVC))
 8. Zero-shot voice conversion with adjusted speaker embeddings and simple acoustic features. 
 9. Extending parrotron: an end-to-end, speech conversion and speech recognition model for atypical speech. 
 10. Zero-shot voice conversion with adjusted speaker embeddings and simple acoustic features.
@@ -48,12 +40,17 @@ Papers accepted to ICASSP 2021 in term of voice conversion (VC)
 
 ## cross-lingual VC
 1. Multi-task wavernn with an integrated architecture for cross-lingual voice conversion
-2. Towards natural and controllable cross-lingual voice conversion based on neural tts model and phonetic posteriorgram ([paper](https://arxiv.org/pdf/2102.01991.pdf))
+2. [Towards natural and controllable cross-lingual voice conversion based on neural tts model and phonetic posteriorgram](#6-towards-natural-and-controllable-cross-lingual-voice-conversion-based-on-neural-tts-model-and-phonetic-posteriorgram) ([paper](https://arxiv.org/pdf/2102.01991.pdf))
 
 ## Toolkit
 
 1. crank: an open-source software for nonparallel voice conversion based on vector-quantized variational autoencoder ([paper](https://arxiv.org/pdf/2103.02858.pdf),[code](https://github.com/k2kobayashi/crank))
 
+
+## Dataset
+
+* [EVC: multi-speaker and multi-lingual emotional speech. (parallel voice conversion dataset)](https://github.com/HLTSingapore/Emotional-Speech-Data
+)  包含中英文各10个说话人，共计350条平行语料。每句话的平局时长为2.9s. 情感类别包括：1) happy, 2) sad, 3) neutral, 4) angry, and 5) surprise.
 
 ## Reading Note
 
@@ -102,10 +99,34 @@ Papers accepted to ICASSP 2021 in term of voice conversion (VC)
 * Adaptive instance nomalization (AdapIN) 可以看作是IN的逆操作，不过这里采用的$\mu$和$\sigma$是目标说话的参数。比如，如果我们希望保留$H$的内容，但将风格迁移到$Z$的风格上，AdapIN的操作可表示为：$\operatorname{AdaIN}(\boldsymbol{H}, \mu(\boldsymbol{Z}), \sigma(\boldsymbol{Z}))=\sigma(\boldsymbol{Z}) \operatorname{IN}(\boldsymbol{H})+\mu(\boldsymbol{Z})$
 
 
-
 * 文中有意思的一点是关于激活函数的选择。作者认为，通过在encoder的输出层添加激活函数（如图中左下角的Activations）可以更好的去除content embedding中的源说话人信息。文中对比了几种不同的激活函数，发现sigmoid的效果最好。如下表所示，分别利用content embedding （$C$）和由$\mu$及$\sigma$组成的speaker info $S$训练一个speaker的分类器，理想状态下基于$C$的精度越低越好，而基于$S$的精度应该越高越好：
 
 <img src="/figure/Again-VC-table.png" width=256 align=center>
 
-### 5. Any-to-One Sequence-to-Sequence Voice Conversion using Self-Supervised Discrete Speech Representations.
+### 5.  Seen and unseen emotional style transfer for voice conversion with a new emotional speech dataset.
 
+* 概要：利用autoenoder的形式对语音的情感信息进行解耦，并借助额外的情感特征提取器获取目标情感信息，从而重构出具有目标情感的语音。这里采用了VAW-GAN的形式。
+* Released Data: https://github.com/HLTSingapore/Emotional-Speech-Data
+* Code: https://kunzhou9646.github.io/controllable-evc/
+
+<img src="figure/EST.png" width=512 align=center >
+
+* 与VC不同的是，emtional style transfer只transform情感信息，而保留目标说话人的内容和音色（speaker identiy）信息.
+* 训练采用了平行语料。
+
+### 6. Towards natural and controllable cross-lingual voice conversion based on neural tts model and phonetic posteriorgram 
+
+* 概要：利用PPGs特征作为桥梁，将cross-lingual voice coversion问题实质上是转换成了source speech - ASR - TTS问题。
+
+<img src="figure/FastVC.png" width=256 align=center>
+
+* Controllable: 由于该模型是的输入和输出是等长的，所以通过对输入的PPGs进行上采样或着下采样可以起到调节语速的作用。从这个角度上将，作者将之称为Controllable.
+* 文中TTS的AM采用了Fastspeech, 所以作者也将文中提出的模型称为FastSpeech-VC. Vocoder 采用了LPCNet.
+
+### 7. End-to-end lyrics recognition with voice to singing style transfer.
+
+* 概要： 为了解决端到端歌词转译数据不足的问题，文中提出了一种将自然语音转为歌唱嗓音的一种数据增强的方法（V2S, voice to singing）。具体方法是借助了语音和成系统WORLD, 以歌声的基频f0和自然语音的谱包络和aperiodic参数为输入，生成歌声数据。
+
+<img src="figure/v2s.png" width=256 align=center>
+
+* 相比于随机选择歌声和自然语音，作者发现选择基频相近的两组数据可以合成更好的歌声结果。
